@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 services:
   db:
@@ -22,7 +22,7 @@ services:
     environment:
       DATABASE_URL: postgres://postgres:password@db:5432/mydatabase
     volumes:
-      - .:/usr/src/app # Mount current directory to container
+      - ./backend:/usr/src/app # Mount current directory to container
       - /usr/src/app/node_modules # Ensure node_modules is correctly mounted
     command: npm start
 
